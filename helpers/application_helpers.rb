@@ -2,13 +2,13 @@ module ApplicationHelpers
 
   def css(*stylesheets)
       stylesheets.map do |stylesheet|
-        "<link href=\"/stylesheets/#{stylesheet}.css\" media=\"screen, projection\" rel=\"stylesheet\" />"
+        "<link href=\"/stylesheets/#{stylesheet}.css\" media=\"screen, projection\" rel=\"stylesheet\"></link>"
       end.join
   end
 
   def js(*javascripts)
     javascripts.map do |javascript|
-      "<script src=\"/javascripts/#{javascript}.css\" media=\"screen, projection\"/>"
+      "<script type=\"text/javascript\" src=\"/javascripts/#{javascript}.js\"></script>"
     end.join
   end
 
