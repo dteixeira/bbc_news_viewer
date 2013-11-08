@@ -1,0 +1,97 @@
+/* Global definitions */
+
+body {
+  background:#f7f7f7;
+}
+
+.card {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+  background: white;
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+  font-weight: 300;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &.small {
+    height:80px;
+  }
+}
+
+/* Search form definitions */
+
+#search-form {
+  margin:0px;
+
+  .button-wrapper {
+    box-shadow:0px 0px 4px #d9d9d9;
+    -moz-box-shadow:0px 0px 4px #d9d9d9;
+    -webkit-box-shadow:0px 0px 4px #d9d9d9;
+    border-radius:0 4px 4px 0;
+    -moz-border-radius:0 4px 4px 0;
+    -webkit-border-radius:0 4px 4px 0;
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    width: 220px;
+  }
+
+  .search-button {
+    float:left;
+    background:#dbdbdb;
+    height:26px;
+    width:100px;
+    padding:5px 10px 5px 10px;
+    border-radius:0 4px 4px 0;
+    -moz-border-radius:0 4px 4px 0;
+    -webkit-border-radius:0 4px 4px 0;
+    text-align:center;
+    border: solid 1px #c5c5c5;
+    text-shadow: beige 1px 1px;
+
+    &.first {
+      background:#f0f0f0;
+      width:76px;
+      border-radius:0;
+      -moz-border-radius:0;
+      -webkit-border-radius:0;
+
+    }
+
+    span {
+      line-height:28px;
+      font-size:1.2em;
+    }
+  }
+
+  #search-input {
+    margin:22px 0 0 25px;
+    border: 1px solid #c4c4c4;
+    height:26px;
+    width:650px;
+    font-size:1.3em;
+    padding:5px 10px 5px 10px;
+    border-radius:4px 0 0 4px;
+    -moz-border-radius:4px 0 0 4px;
+    -webkit-border-radius:4px 0 0 4px;
+    box-shadow:0px 0px 4px #d9d9d9;
+    -moz-box-shadow:0px 0px 4px #d9d9d9;
+    -webkit-box-shadow:0px 0px 4px #d9d9d9;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #7bc1f7;
+      box-shadow: 0px 0px 8px #7bc1f7;
+      -moz-box-shadow: 0px 0px 8px #7bc1f7;
+      -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+    }
+  }
+}
