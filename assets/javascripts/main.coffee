@@ -30,7 +30,7 @@ $(document).ready ->
   $('#advanced-date input').datepicker('option', 'dateFormat', 'yy-mm-dd')
 
   # Slider.
-  $('#advanced-slop .advanced-title span').text('(max distance of 0 words)')
+  $('#advanced-slop .advanced-title span').text('( max distance of 0 words )')
   $('#advanced-slop input').val(0)
   $('#advanced-slop #slop').slider({
     min:0,
@@ -38,7 +38,7 @@ $(document).ready ->
     value:0,
     range:'min'
     slide: (event, ui) ->
-      t = if ui.value == 1 then '(max distance of 1 word)' else '(max distance of ' + ui.value + ' words)'
+      t = if ui.value == 1 then '( max distance of 1 word )' else '( max distance of ' + ui.value + ' words )'
       $('#advanced-slop .advanced-title span').text(t)
       $('#advanced-slop input').val(ui.value)
   })
