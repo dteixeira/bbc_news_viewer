@@ -11,5 +11,27 @@ div.row
 
 div class="row sixteen columns alpha omage" id="advanced"
   div class="card half six columns alpha"
+    span.advanced-title Search in
+    ul.advanced-list
+      li: label for="title" Title
+      li: input type="checkbox" name="title" checked=""
+      li: label for="title" Description
+      li: input type="checkbox" name="description" checked=""
+      li: label for="title" Body
+      li: input type="checkbox" name="body" checked=""
+
   div class="card ten columns omega"
   div class="card half under six columns alpha"
+    span.advanced-title Must have media
+    div#advanced-media
+      ul.advanced-list
+        li: label for="video" Video
+        li: select class="advanced-select" id="video"
+          option value="none" Any
+          option value="true" Yes
+          option value="false" No
+        li: label for="audio" Audio
+        li: select class="advanced-select" id="audio"
+          option value="none" Any
+          option value="true" Yes
+          option value="false" No

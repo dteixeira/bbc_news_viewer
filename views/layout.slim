@@ -10,7 +10,7 @@ html lang="en"
     link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"
 
     / stylesheets
-    == css 'skeleton', 'base', 'layout', 'animation', 'navigation', 'main'
+    == css 'skeleton', 'base', 'layout', 'animation', 'navigation', 'main', 'grey', 'dropkick'
     link href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" media="screen, projection" rel="stylesheet"
     link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css"
 
@@ -18,6 +18,7 @@ html lang="en"
     script src="http://code.jquery.com/jquery-1.8.2.min.js"
     script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"
     == cs 'main'
+    == js 'jquery.icheck', 'jquery.dropkick'
 
   body
     == partial :header

@@ -121,7 +121,131 @@ body {
 
       &.under {
         top:-75px;
+        overflow:visible;
       }
     }
   }
+
+  .advanced-title {
+    padding: 10px;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+
+  .advanced-list {
+    list-style:none;
+
+    & > li {
+      display:inline-block;
+
+      label {
+        font-size: 1.2em;
+        font-weight: 400;
+        position: relative;
+        top: -15px;
+        padding: 10px 10px 10px 20px;
+      }
+    }
+  }
+
+  #advanced-media  {
+    a.dk_toggle {
+      width:30px;
+    }
+
+    .advanced-list li label {
+      top:-35px;
+    }
+  }
 }
+
+/* Dropkick custom theme */
+
+.dk_theme_black {
+  background: #777;
+  font-size:1.2em;
+}
+
+.dk_theme_black .dk_toggle {
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  box-shadow:none;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  border-color:#505050;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  &:hover, &:active, &:focus {
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    border-color:#505050;
+  }
+}
+
+.dk_theme_black .dk_label {
+  display: block;
+}
+
+.dk_theme_black .dk_toggle,
+.dk_theme_black.dk_open .dk_toggle {
+  background-color:#505050;
+  color: beige;
+  font-family:"Source Sans Pro";
+  font-size:1.3em;
+  font-weight:400;
+  text-shadow: rgb(163, 163, 163) 1px 1px 1px;
+}
+
+.dk_theme_black .dk_toggle:after {
+  border-top-color: #fff;
+}
+
+.dk_theme_black .dk_options_inner {
+  margin-bottom:0;
+  margin-left:0;
+  margin-top:0;
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  border:none;
+  border-top: solid 2px #505050;
+
+  li {
+    margin-bottom:0;
+  }
+}
+
+.dk_theme_black .dk_options a {
+  font-size:1.2em;
+  font-weight:400;
+  background-color:#777;
+  color:beige;
+  text-shadow:none;
+}
+
+.dk_theme_black .dk_options a {
+  background-color:white;
+  padding-bottom:6px;
+  padding-top:6px;
+}
+
+.dk_theme_black .dk_options a,
+.dk_theme_black .dk_options .dk_option_current a {
+  border:none;
+  background-color:#6d6d6d;
+  color: #fff;
+  text-shadow: #604A42 0 1px 0;
+  text-shadow: rgb(163, 163, 163) 1px 1px 1px;
+  font-size:1.2em;
+  font-weight:400;
+
+  &:hover {
+    background-color:#969696;
+    text-shadow: rgb(163, 163, 163) 1px 1px 1px;
+  }
+}
+
+
