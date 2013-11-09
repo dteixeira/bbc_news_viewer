@@ -9,11 +9,15 @@ class AssetHandler < Sinatra::Base
     set :cssengine, 'scss'
   end
 
-  get '/javascripts/*.js' do
+  get '/coffescripts/*.js' do
     pass unless settings.coffeescript?
     last_modified File.mtime(settings.root + '/assets/' + settings.jsdir)
     cache_control :public, :must_revalidate
     coffee (settings.jsdir + '/' + params[:splat].first).to_sym
+  end
+
+  get '/javascripts/*.js' do
+    send_file(settings.views + '/' + settings.jsdir + '/' + params[:splat].first + '.js')
   end
 
   get '/stylesheets/*.css' do

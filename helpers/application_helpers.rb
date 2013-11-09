@@ -12,6 +12,12 @@ module ApplicationHelpers
     end.join
   end
 
+  def cs(*javascripts)
+    javascripts.map do |javascript|
+      "<script type=\"text/javascript\" src=\"/coffescripts/#{javascript}.js\"></script>"
+    end.join
+  end
+
   def current?(path='/')
     request.path_info==path ? "current":  nil
   end
