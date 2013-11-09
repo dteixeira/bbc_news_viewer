@@ -25,7 +25,30 @@ div.row
           li: input class="advanced-check" type="checkbox" id="checkbox-body" name="body" checked=""
 
       / Topic selector
-      div class="card ten columns omega"
+      div class="card ten columns omega" id="advanced-topics"
+        span.advanced-title With topics
+        table.advanced-table
+          tr
+            td: label for="title" UK
+            td: input class="advanced-check" type="checkbox" id="checkbox-title" name="topic_uk" checked=""
+            td: label for="title" World
+            td: input class="advanced-check" type="checkbox" id="checkbox-description" name="topic_world" checked=""
+            td: label for="title" Education
+            td: input class="advanced-check" type="checkbox" id="checkbox-body" name="topic_education" checked=""
+          tr
+            td: label for="title" Politics
+            td: input class="advanced-check" type="checkbox" id="checkbox-title" name="topic_politics" checked=""
+            td: label for="title" Health
+            td: input class="advanced-check" type="checkbox" id="checkbox-description" name="topic_health" checked=""
+            td: label for="title" Science and Environment
+            td: input class="advanced-check" type="checkbox" id="checkbox-body" name="topic_science_and_environment" checked=""
+          tr
+            td: label for="title" Business
+            td: input class="advanced-check" type="checkbox" id="checkbox-title" name="topic_business" checked=""
+            td: label for="title" Technology
+            td: input class="advanced-check" type="checkbox" id="checkbox-description" name="topic_technology" checked=""
+            td: label for="title" Entertainment and Arts
+            td: input class="advanced-check" type="checkbox" id="checkbox-body" name="topic_entertainment_and_arts" checked=""
 
       / Media selector
       div class="card half under six columns alpha"
