@@ -1,15 +1,19 @@
 div.row
   form#search-form action="#"
-    div class="card small sixteen columns alpha omega"
-      div
-        input#search-input type="text"
-        div.button-wrapper
-          div#search-button class="search-button first"
-            span Search
-          div#advanced-button class="search-button"
-            span Advanced
 
+    / Search form
+    div class="card small sixteen columns alpha omega" id="standard"
+      input#search-input type="text"
+      div.button-wrapper
+        div#search-button class="search-button first"
+          span Search
+        div#advanced-button class="search-button"
+          span Advanced
+
+    / Top advanced search bar
     div class="row sixteen columns alpha omage advanced" id="advanced"
+
+      / Field selector
       div class="card half six columns alpha"
         span.advanced-title Search in
         ul.advanced-list
@@ -20,7 +24,10 @@ div.row
           li: label for="title" Body
           li: input class="advanced-check" type="checkbox" id="checkbox-body" name="body" checked=""
 
+      / Topic selector
       div class="card ten columns omega"
+
+      / Media selector
       div class="card half under six columns alpha"
         span.advanced-title Must have media
         div#advanced-media
@@ -35,9 +42,14 @@ div.row
               option value="none" Any
               option value="true" Yes
               option value="false" No
+
+    / Bottom advanced search bar
     div class="row sixteen columns alpha omage advanced" id="advanced-below"
+
+      / Slop selector
       div class="card ten columns alpha"
         div#advanced-slop
+          input type="hidden" name="slop"
           span.advanced-title
             |With strictness
             span
@@ -45,6 +57,8 @@ div.row
             li: label Strict
             li: div id="slop"
             li: label Sloppy
+
+      / Date selector
       div class="card six columns omega"
         div#advanced-date
           span.advanced-title Between dates
