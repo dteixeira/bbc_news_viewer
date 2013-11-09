@@ -2,7 +2,7 @@ $(document).ready ->
 
   # Advanced search animation.
   $('#advanced-button').click ->
-    adv = $('#advanced')
+    adv = $('.advanced')
     if adv.is('[visible]')
       adv.stop().animate({ height: '0', opacity: '0', 'margin-bottom': '0' }, 1000, -> adv.css('overflow', ''); adv.css('display', 'none'))
       adv.removeAttr('visible')
@@ -12,7 +12,7 @@ $(document).ready ->
       adv.attr('visible', '')
 
   # Better checkboxes.
-  $('input').iCheck({
+  $('.advanced-check').iCheck({
     checkboxClass: 'icheckbox_square-grey',
     radioClass: 'iradio_square-grey',
     increaseArea: '20%'
@@ -23,4 +23,20 @@ $(document).ready ->
     theme: 'black',
     change: (value, label) ->
       $(this).dropkick('black', value)
+  })
+
+  # Date pickers.
+  $('#advanced-date input').datepicker()
+  $('#advanced-date input').datepicker('option', 'dateFormat', 'yy-mm-dd')
+
+  # Slider.
+  $('#advanced-slop .advanced-title span').text('(max distance of 0 words)')
+  $('#advanced-slop #slop').slider({
+    min:0,
+    max:20,
+    value:0,
+    range:'min'
+    slide: (event, ui) ->
+      t = if ui.value == 1 then '(max distance of 1 word)' else '(max distance of ' + ui.value + ' words)'
+      $('#advanced-slop .advanced-title span').text(t)
   })

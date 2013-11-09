@@ -4,21 +4,18 @@ html lang="en"
   head
     title == @title
     meta charset="utf-8"
-    meta name="viewport" content="width=device-width initial-scale=1.0"
 
     / favicon
     link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"
 
     / stylesheets
-    == css 'skeleton', 'base', 'layout', 'animation', 'navigation', 'main', 'grey', 'dropkick'
-    link href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" media="screen, projection" rel="stylesheet"
-    link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css"
+    == css 'skeleton', 'base', 'layout', 'animation', 'navigation', 'main', 'grey', 'dropkick', 'jquery-ui'
+    link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" type="text/css"
 
     / javascripts (coffee)
-    script src="http://code.jquery.com/jquery-1.8.2.min.js"
-    script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
     == cs 'main'
-    == js 'jquery.icheck', 'jquery.dropkick'
+    == js 'jquery.icheck', 'jquery.dropkick', 'jquery-ui'
 
   body
     == partial :header

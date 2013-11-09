@@ -1,37 +1,55 @@
 div.row
-  div class="card small sixteen columns alpha omega"
-    form#search-form action="#"
+  form#search-form action="#"
+    div class="card small sixteen columns alpha omega"
       div
         input#search-input type="text"
         div.button-wrapper
-          div class="search-button first"
+          div#search-button class="search-button first"
             span Search
           div#advanced-button class="search-button"
             span Advanced
 
-div class="row sixteen columns alpha omage" id="advanced"
-  div class="card half six columns alpha"
-    span.advanced-title Search in
-    ul.advanced-list
-      li: label for="title" Title
-      li: input type="checkbox" name="title" checked=""
-      li: label for="title" Description
-      li: input type="checkbox" name="description" checked=""
-      li: label for="title" Body
-      li: input type="checkbox" name="body" checked=""
+    div class="row sixteen columns alpha omage advanced" id="advanced"
+      div class="card half six columns alpha"
+        span.advanced-title Search in
+        ul.advanced-list
+          li: label for="title" Title
+          li: input class="advanced-check" type="checkbox" id="checkbox-title" name="title" checked=""
+          li: label for="title" Description
+          li: input class="advanced-check" type="checkbox" id="checkbox-description" name="description" checked=""
+          li: label for="title" Body
+          li: input class="advanced-check" type="checkbox" id="checkbox-body" name="body" checked=""
 
-  div class="card ten columns omega"
-  div class="card half under six columns alpha"
-    span.advanced-title Must have media
-    div#advanced-media
-      ul.advanced-list
-        li: label for="video" Video
-        li: select class="advanced-select" id="video"
-          option value="none" Any
-          option value="true" Yes
-          option value="false" No
-        li: label for="audio" Audio
-        li: select class="advanced-select" id="audio"
-          option value="none" Any
-          option value="true" Yes
-          option value="false" No
+      div class="card ten columns omega"
+      div class="card half under six columns alpha"
+        span.advanced-title Must have media
+        div#advanced-media
+          ul.advanced-list
+            li: label for="video" Video
+            li: select class="advanced-select" id="video"
+              option value="none" Any
+              option value="true" Yes
+              option value="false" No
+            li: label for="audio" Audio
+            li: select class="advanced-select" id="audio"
+              option value="none" Any
+              option value="true" Yes
+              option value="false" No
+    div class="row sixteen columns alpha omage advanced" id="advanced-below"
+      div class="card ten columns alpha"
+        div#advanced-slop
+          span.advanced-title
+            |With strictness
+            span
+          ul.advanced-list
+            li: label Strict
+            li: div id="slop"
+            li: label Sloppy
+      div class="card six columns omega"
+        div#advanced-date
+          span.advanced-title Between dates
+          ul.advanced-list
+            li: label for="begin-date" From
+            li: input type="text" name="begin-date" id="begin-date"
+            li: label for="begin-date" To
+            li: input type="text" name="end-date" id="end-date"
