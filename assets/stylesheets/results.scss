@@ -1,9 +1,9 @@
 .resultlist {
+    width: 100%;
 
     .resultcard {
         font-size: 20px;
-        overflow:auto;
-        white-space: nowrap;
+        white-space: initial;
         display: inline-block;
         margin: 5px;
         border-radius: 2px;
@@ -12,6 +12,8 @@
         vertical-align: top;
         position: relative;
         font-weight: 300;
+        max-width: 940px;
+        word-wrap: break-word;
         cursor: default;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -19,9 +21,14 @@
 
         .cardtitle {
             padding:5px;
+            margin-bottom: 10px;
             font-size: 1.2em;
             font-weight: 400;
+            text-decoration:none;
         }
+            &.hover{
+                text-decoration: underline;
+            }
         .cardthumb {
             padding:5px;
             padding-top:0;
@@ -33,10 +40,8 @@
         
         .cardtext {
             font-size:95%;
-            width: inherit;
-            max-width: inherit;
-            display:block;
             width: 80%;
+            display: inline-block;
 
             .cardtopics {
                 padding-left: 10px;
@@ -51,15 +56,19 @@
                 margin-bottom:0;
                 padding-bottom:0;
             }
-            
+            .cardmedia {
+                color: #22421a;
+                font-weight: bold;
+                margin-bottom:0;
+                padding-bottom:0;
+            }
+
             .carddescription {
                 margin-left: 10px;
-                margin-top:0;
-                padding-top:0;
-                font-size: 95%;
-                overflow:visible;
-                text-wrap:normal;
+                padding-top:5px;
+                font-size: 85%;
             }
+
             .highlight {
                 font-weight:400;
                 font-size:1em;
