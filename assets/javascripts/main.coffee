@@ -54,4 +54,4 @@ $(document).ready ->
       body.css('display', 'block')
       h = $('.body', body).height()
       body.attr('visible', '')
-      body.stop().animate({height: h}, 1000)
+      body.stop().animate({height: h}, 1000, -> body.css('height', 'auto'))
