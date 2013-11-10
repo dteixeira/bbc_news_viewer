@@ -122,10 +122,17 @@ body {
 
 /* Advanced search */
 
+#advanced {
+  height:0;
+  display:none;
+  margin-bottom:0;
+}
+
 .advanced {
   height:0;
   opacity:0;
   display:none;
+  margin-bottom:0;
 
   .card {
     height:150px;
