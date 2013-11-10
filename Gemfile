@@ -18,6 +18,7 @@ gem 'slim'
 gem 'sass'
 gem 'coffee-script'
 gem 'therubyracer'
+gem 'will_paginate'
 
 # Gems for server deployement.
 gem 'shotgun'

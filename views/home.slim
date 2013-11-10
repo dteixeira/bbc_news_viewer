@@ -1,2 +1,4 @@
 - for r in @results
   == partial :results, locals: { result: r, topics: @topics }
+div class="row sixteen columns alpha omega"
+  == will_paginate @results

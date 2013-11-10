@@ -4,8 +4,12 @@ class WebsiteController < ApplicationController
     define_topics
     @title = ''
     solr = RSolr.connect :url => 'http://localhost:8080/solr'
-    response = solr.get 'select', :params => {:q => '*:*', :rows => 5}
-    @results = response['response']['docs']
+    @r = solr.get 'select', :params => { :q => '*:*', :rows => 99999 }
+    puts @r['response']['numFound']
+    @results = WillPaginate::Collection.create(params[:page] || 1, 10) do |pager|
+      pager.total_entries = @r['response']['numFound']
+      pager.replace(@r['response']['docs'][pager.offset, pager.per_page].to_a)
+    end
     slim :home
   end
 

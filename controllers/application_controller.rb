@@ -9,6 +9,8 @@ require 'coffee-script'
 require 'v8'
 require 'asset_handler'
 require 'rsolr'
+require 'will_paginate'
+require 'will_paginate/collection'
 
 class ApplicationController < Sinatra::Base
 
@@ -16,6 +18,7 @@ class ApplicationController < Sinatra::Base
 
   register Sinatra::Flash
   register Sinatra::Partial
+  register WillPaginate::Sinatra
 
   configure do
     set :views, File.expand_path('../../views', __FILE__)
