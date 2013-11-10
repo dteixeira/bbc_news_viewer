@@ -42,3 +42,18 @@ $(document).ready ->
       $('#advanced-slop .advanced-title span').text(t)
       $('#advanced-slop input').val(ui.value)
   })
+
+  # Test.
+  #$('#search-button').click ->
+    #adv = $('#test')
+    #if adv.is('[visible]')
+      #adv.stop().animate({ height: '50px', 'margin-bottom': '0' }, 1000, -> adv.css('overflow', '');)
+      #adv.removeAttr('visible')
+    #else
+      #curHeight = adv.height()
+      #autoHeight = adv.css('height', 'auto').height()
+      #adv.height(curHeight)
+      #adv.stop().animate({ height: autoHeight, 'margin-bottom': '20px' }, 1000, ->
+        #adv.css('overflow', '')
+        #adv.height('auto'))
+      #adv.attr('visible', '')
