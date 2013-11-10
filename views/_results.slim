@@ -1,14 +1,24 @@
-ul class="resultlist"
-    li class="sixteen columns alpha omega resultcard"
-        a href="http://www.bbc.co.uk/news/uk-england-gloucestershire-24865702"
-            p class="cardtitle" 'Lost' novel by war poet FW Harvey 'a jewel of a find'
-            span class="cardthumb"
-                img src="http://newsvote.bbc.co.uk/mpapps/imp/cache/news+70989000+jpg+_70989495_fwharvey_smile-001:scale+130+73.jpg"
-            div class="cardtext"
-                span class="cardtopics" uk, world
-                span class="cardpubdate"  | 10 Nov 2013
-                span class="cardmedia"  | audio, video
-                div class="carddescription"
-                    | 5th Gloucester's Gazette. "They were funny, because what people needed in the trenches was humour,
-                    and they got sent home and the <span class="highlight"> Bishop </span> of Gloucester…
-
+div class="row sixteen columns alpha omega result-card"
+  div class="sixteen columns alpha omega card"
+    div class="four columns alpha result-image"
+      img style="background-image: url(#{result['thumbnail']})"
+    div class="eleven columns omega result-content"
+      a href="#{result['url']}"
+        h1.title == result['title']
+      ul.result-list
+        li: p.date == "#{Date.strptime(result['date'], '%Y-%m-%dT%H:%M:%SZ').strftime('%d %B, %Y')} | "
+        - if result['video'] && result['audio']
+          li: p.media Contains <span>audio</span> and <span>video</span> content
+        - elsif result['audio']
+          li: p.media Contains <span>audio</span> content
+        - elsif result['video']
+          li: p.media Contains <span>video</span> content
+        - else
+          li: p.media Contains no media content
+      ul class="result-list topics"
+        - for topic in result['topics']
+          li: p == topics[topic]
+    div class="row sixteen columns alpha omega result-description"
+      p.description == result['description']
+    div class="row sixteen columns alpha omega result-body"
+      p.body == result['body']

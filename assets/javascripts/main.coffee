@@ -43,17 +43,15 @@ $(document).ready ->
       $('#advanced-slop input').val(ui.value)
   })
 
-  # Test.
-  #$('#search-button').click ->
-    #adv = $('#test')
-    #if adv.is('[visible]')
-      #adv.stop().animate({ height: '50px', 'margin-bottom': '0' }, 1000, -> adv.css('overflow', '');)
-      #adv.removeAttr('visible')
-    #else
-      #curHeight = adv.height()
-      #autoHeight = adv.css('height', 'auto').height()
-      #adv.height(curHeight)
-      #adv.stop().animate({ height: autoHeight, 'margin-bottom': '20px' }, 1000, ->
-        #adv.css('overflow', '')
-        #adv.height('auto'))
-      #adv.attr('visible', '')
+  # News body slider.
+  $('.result-card').click ->
+    body = $('.result-body', this)
+    if body.is('[visible]')
+      body.removeAttr('visible')
+      body.stop().animate({height: 0}, 1000, -> body.css('display', 'none'))
+    else
+      $('.result-card .result-body[visible]').trigger('click')
+      body.css('display', 'block')
+      h = $('.body', body).height()
+      body.attr('visible', '')
+      body.stop().animate({height: h}, 1000)

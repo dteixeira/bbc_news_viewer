@@ -8,6 +8,7 @@ require 'sass'
 require 'coffee-script'
 require 'v8'
 require 'asset_handler'
+require 'rsolr'
 
 class ApplicationController < Sinatra::Base
 

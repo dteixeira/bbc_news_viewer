@@ -1,79 +1,91 @@
-.resultlist {
-    width: 100%;
+.result-card {
+  .card {
+    height:auto;
 
-    .resultcard {
-        font-size: 20px;
-        white-space: initial;
-        display: inline-block;
-        margin: 5px;
-        border-radius: 2px;
-        box-shadow: 0px 2px 4px rgba(0,0,0,.2);
-        background: white;
-        vertical-align: top;
-        position: relative;
-        font-weight: 300;
-        max-width: 940px;
-        word-wrap: break-word;
-        cursor: default;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
+    .result-image{
+      padding-left:10px;
+      height:115px;
+      width:200px;
+      padding:20px;
+      padding-right:0;
 
-        .cardtitle {
-            padding:5px;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            font-weight: 400;
-            text-decoration:none;
-        }
-            &.hover{
-                text-decoration: underline;
-            }
-        .cardthumb {
-            padding:5px;
-            padding-top:0;
-            float:left;
-            overflow:hidden;
-            background-color:white;
-            text-align:center;
-        }
-        
-        .cardtext {
-            font-size:95%;
-            width: 80%;
-            display: inline-block;
-
-            .cardtopics {
-                padding-left: 10px;
-                color: #61282b;
-                font-weight: bold;
-                margin-bottom:0;
-                padding-bottom:0;
-            }
-            .cardpubdate {
-                color: #004e84;
-                font-weight: bold;
-                margin-bottom:0;
-                padding-bottom:0;
-            }
-            .cardmedia {
-                color: #22421a;
-                font-weight: bold;
-                margin-bottom:0;
-                padding-bottom:0;
-            }
-
-            .carddescription {
-                margin-left: 10px;
-                padding-top:5px;
-                font-size: 85%;
-            }
-
-            .highlight {
-                font-weight:400;
-                font-size:1em;
-            }
-        }
+      img {
+        background-position: center;
+        background-clip: content-box;
+        background-size: cover;
+        height:115px;
+        width:200px;
+      }
     }
-}
 
+    .result-description,
+    .result-body {
+      padding-left:20px;
+      padding-right:20px;
+      width:900px;
+
+      .description,
+      .body {
+        font-size:1.3em;
+        text-align:justify;
+        white-space:normal;
+        margin-bottom:0;
+      }
+    }
+
+    .result-body {
+      display:none;
+      height:0;
+    }
+
+    .result-content {
+      padding-top:25px;
+      width:680px;
+
+      .title {
+        font-size:1.6em;
+        line-height:1.6em;
+        text-align: justify;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom:0;
+        font-weight:400;
+      }
+
+      .date {
+        font-size:1.5em;
+      }
+
+      .media {
+        font-size: 1.3em;
+        padding-left: 5px;
+
+        span {
+          font-weight:600;
+        }
+      }
+
+      .result-list {
+        margin-top: -5px;
+        margin-bottom: 5px;
+
+        li {
+          display:inline-block;
+          margin-bottom:0;
+        }
+
+        &.topics {
+          margin:0;
+          float:right;
+
+          li {
+            margin-left: 15px;
+            font-size: 1.2em;
+            font-weight:400;
+          }
+        }
+      }
+    }
+  }
+}
