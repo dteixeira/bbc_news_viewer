@@ -1,5 +1,6 @@
 div.row
-  form#search-form action="#"
+  form#search-form action="/" method="get"
+    input type="hidden" name="use-selected" id="use-selected"
 
     / Search form
     div class="card small sixteen columns alpha omega" id="standard"
@@ -11,6 +12,7 @@ div.row
           span Advanced
 
     / Top advanced search bar
+    div id="repeat-search" style="display:none;" = params
     div class="row sixteen columns alpha omage advanced" id="advanced"
 
       / Field selector
@@ -30,25 +32,25 @@ div.row
         table.advanced-table
           tr
             td: label for="title" UK
-            td: input class="advanced-check" type="checkbox" id="checkbox-title" name="topic_uk" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_uk" name="topic_uk" checked=""
             td: label for="title" World
-            td: input class="advanced-check" type="checkbox" id="checkbox-description" name="topic_world" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_world" name="topic_world" checked=""
             td: label for="title" Education
-            td: input class="advanced-check" type="checkbox" id="checkbox-body" name="topic_education" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_education" name="topic_education" checked=""
           tr
             td: label for="title" Politics
-            td: input class="advanced-check" type="checkbox" id="checkbox-title" name="topic_politics" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_politics" name="topic_politics" checked=""
             td: label for="title" Health
-            td: input class="advanced-check" type="checkbox" id="checkbox-description" name="topic_health" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_health" name="topic_health" checked=""
             td: label for="title" Science and Environment
-            td: input class="advanced-check" type="checkbox" id="checkbox-body" name="topic_science_and_environment" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_science_and_environment" name="topic_science_and_environment" checked=""
           tr
             td: label for="title" Business
-            td: input class="advanced-check" type="checkbox" id="checkbox-title" name="topic_business" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_business" name="topic_business" checked=""
             td: label for="title" Technology
-            td: input class="advanced-check" type="checkbox" id="checkbox-description" name="topic_technology" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_technology" name="topic_technology" checked=""
             td: label for="title" Entertainment and Arts
-            td: input class="advanced-check" type="checkbox" id="checkbox-body" name="topic_entertainment_and_arts" checked=""
+            td: input class="advanced-check" type="checkbox" id="topic_entertainment_and_arts" name="topic_entertainment_and_arts" checked=""
 
       / Media selector
       div class="card half under six columns alpha"
@@ -56,12 +58,12 @@ div.row
         div#advanced-media
           ul.advanced-list
             li: label for="video" Video
-            li: select class="advanced-select" id="video"
+            li: select class="advanced-select" id="video" name="video"
               option value="none" Any
               option value="true" Yes
               option value="false" No
             li: label for="audio" Audio
-            li: select class="advanced-select" id="audio"
+            li: select class="advanced-select" id="audio" name="audio"
               option value="none" Any
               option value="true" Yes
               option value="false" No

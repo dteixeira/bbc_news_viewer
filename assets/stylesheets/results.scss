@@ -2,6 +2,12 @@
   .card {
     height:auto;
 
+    em {
+      font-weight:600;
+      font-style:normal;
+      color:cornflowerblue;
+    }
+
     .result-image{
       padding-left:10px;
       height:115px;
@@ -9,7 +15,7 @@
       padding:20px;
       padding-right:0;
 
-      img {
+      div {
         background-position: center;
         background-clip: content-box;
         background-size: cover;

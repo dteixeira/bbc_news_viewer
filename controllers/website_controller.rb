@@ -1,30 +1,28 @@
 class WebsiteController < ApplicationController
 
+  helpers WebsiteHelpers
+
   get '/' do
+    @params = params
+    @title = 'BBC News Search'
+
+    # Search setup.
     define_topics
-    @title = ''
-    solr = RSolr.connect :url => 'http://localhost:8080/solr'
-    @r = solr.get 'select', :params => { :q => '*:*', :rows => 99999 }
-    @results = WillPaginate::Collection.create(params[:page] || 1, 10) do |pager|
-      pager.total_entries = @r['response']['numFound']
-      pager.replace(@r['response']['docs'][pager.offset, pager.per_page].to_a)
+    solr = connect_solr
+    q_params = { :q => 'text:"manchester united"' }
+    default_query_options q_params
+    page = params[:page] || 1
+    page = page.to_i
+    result = paginated_solr_query solr, q_params, page
+
+    # Result binding.
+    if result
+      @results = paginate_solr_response result, page
+    else
+      @results = []
     end
+
+    # Render view.
     slim :home
   end
-
-  private
-  def define_topics
-    @topics = {
-      'uk' => 'UK',
-      'world' => 'World',
-      'education' => 'Education',
-      'politics' => 'Politics',
-      'health' => 'Health',
-      'science_and_environment' => 'Science and Environment',
-      'business' => 'Business',
-      'technology' => 'Technology',
-      'entertainment_and_arts' => 'Entertainment and Arts'
-    }
-  end
-
 end

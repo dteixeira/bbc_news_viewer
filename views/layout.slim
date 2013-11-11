@@ -21,7 +21,7 @@ html lang="en"
     == partial :header
 
     div class="container"
-      == partial :search
+      == partial :search, locals: { params: @params }
       == styled_flash
       == yield
 

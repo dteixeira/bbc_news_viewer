@@ -14,6 +14,11 @@ require 'will_paginate/collection'
 
 class ApplicationController < Sinatra::Base
 
+  # Global constants.
+  SOLR_SERVER = 'http://localhost:8080/solr'
+  SOLR_MAX_RESULTS = 200
+  SOLR_RESULTS_PER_PAGE = 10
+
   helpers ApplicationHelpers
 
   register Sinatra::Flash
