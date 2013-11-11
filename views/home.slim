@@ -1,4 +1,12 @@
-- for r in @results
-  == partial :results, locals: { result: r, topics: @topics }
-div class="row sixteen columns alpha omega"
-  == will_paginate @results
+- if @results != nil
+  - if @results.length > 0
+    - for r in @results
+      == partial :results, locals: { result: r, topics: @topics }
+    div class="row sixteen columns alpha omega"
+      == will_paginate @results
+  - else
+    == ''
+  / No results.
+- else
+  == ''
+/ No search.
