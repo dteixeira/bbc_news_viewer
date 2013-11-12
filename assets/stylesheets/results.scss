@@ -2,6 +2,12 @@
   .card {
     height:auto;
 
+    &:hover {
+      -webkit-box-shadow: 0 6px 10px -2px #777;
+      -moz-box-shadow: 0 6px 10px -2px #777;
+      box-shadow: 0 6px 10px -2px #777;
+    }
+
     em {
       font-weight:600;
       font-style:normal;

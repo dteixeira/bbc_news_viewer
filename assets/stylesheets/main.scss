@@ -4,13 +4,19 @@ body {
   background:#f7f7f7;
 }
 
-.footer {
-  color: grey;
-  font-size: 15px;
-  margin-left: 196px;
-  margin-right: 196px;
-  margin-top: 20px;
-  text-align: center;
+footer {
+  text-align:center;
+  margin-top:50px;
+
+  .footer-container {
+    border-top: solid 1px #cccccc;
+    padding-top: 10px;
+  }
+
+  p {
+    color: #757575;
+    font-size: 1.1em;
+  }
 }
 
 .card {
