@@ -11,6 +11,7 @@ require 'asset_handler'
 require 'rsolr'
 require 'will_paginate'
 require 'will_paginate/collection'
+require 'cgi'
 
 class ApplicationController < Sinatra::Base
 

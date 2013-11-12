@@ -13,10 +13,17 @@ $(document).ready ->
       adv.attr('visible', '')
       $('#use-selected').val('true')
 
+  # Bind enter to search field.
+  $('#search-input').keypress((e) ->
+    if e.which == 13
+      $('#search-form').submit()
+  )
+
   # Rebuild advanced search params.
   p = $.parseJSON($('#repeat-search').text().replace(/\=\>/g, ':'))
-  if(p['use-selected'])
+  $('#search-input').val(p['search-query'])
 
+  if(p['use-selected'])
     # Field checkboxes.
     $('#checkbox-title').removeAttr('checked') if !p['title']
     $('#checkbox-description').removeAttr('checked') if !p['description']

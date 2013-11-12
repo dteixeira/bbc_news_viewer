@@ -1,12 +1,14 @@
 - if @results != nil
   - if @results.length > 0
+    div class="row ten columns offset-by-three alpha omega" id="results-count"
+      div.results-container
+        p == "<span>#{@n_results} #{@n_results == 1 ? 'result' : 'results'}</span> found in <span>#{@t_query} seconds</span>."
+    div class="row sixteen columns alpha omega paginate"
+      == will_paginate @results
     - for r in @results
       == partial :results, locals: { result: r, topics: @topics }
-    div class="row sixteen columns alpha omega"
+    div class="row sixteen columns alpha omega paginate"
       == will_paginate @results
   - else
-    == ''
-  / No results.
-- else
-  == ''
-/ No search.
+    div class="sixteen columns alpha omega no-results"
+      span No matches were found for your query. Try another, please.
