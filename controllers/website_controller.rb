@@ -11,7 +11,7 @@ class WebsiteController < ApplicationController
 
       # Obtain and escape query.
       query = (params['search-query'] || '*:*').strip
-      query = CGI.escape(query)
+      query = query == '' ? '*:*' : query
 
       # Search setup.
       define_topics
