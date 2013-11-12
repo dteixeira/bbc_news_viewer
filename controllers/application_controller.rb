@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
 
   # Global constants.
   SOLR_SERVER = 'http://localhost:8080/solr'
-  SOLR_MAX_RESULTS = 200
+  SOLR_MAX_RESULTS = 300
   SOLR_RESULTS_PER_PAGE = 10
   TITLE_BOOST = '1'
   DESCRIPTION_BOOST = '1'
