@@ -19,9 +19,9 @@ class ApplicationController < Sinatra::Base
   SOLR_SERVER = 'http://localhost:8080/solr'
   SOLR_MAX_RESULTS = 300
   SOLR_RESULTS_PER_PAGE = 10
-  TITLE_BOOST = '1'
-  DESCRIPTION_BOOST = '1'
-  BODY_BOOST = '1'
+  TITLE_BOOST = '1.0'
+  DESCRIPTION_BOOST = '2.0'
+  BODY_BOOST = '0.8'
 
   helpers ApplicationHelpers
 
